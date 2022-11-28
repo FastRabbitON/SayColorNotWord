@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say Color TEST</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <div id = "startscreen" class="startscreen-on"> 
+            <div class="background" ></div>
+            <div class="content" >
+                <h1>Game rules</h1>
+                <div>Choose a word in the color it was written. </br>
+                    Wrong answer adds 2 seconds to the time. </br>
+                    Remember, the faster the better! </br>
+                    You have ony 10 rounds. 
+                </div>
+                <div class="giph"></div>
+                <button id="playbutton" class="playbutton">play!</button>
+            </div>
+            <div></div>
+
+        </div>
+
+        <div id="answerborder" class="answerborder"></div>
+
+        <div class="main">
+
+            <div class="title">Say color not the word</div>
+
+            <div id="counter" class="counter-off">
+                <div id="seconds" class="seconds">00</div>
+                <div id="colon" class="colon">:</div>
+                <div id="millisecond" class="millisecond">00</div>
+            </div>
+
+            <div class="question">
+                <div id="questionarea"></div>
+            </div>
+
+            <div class="answer">
+                <button id="answer1" class="startbutton">X</button>
+                <button id="answer2" class="startbutton">X</button>
+                <button id="answer3" class="startbutton">X</button>
+                <button id="answer4" class="startbutton">X</button>
+                <button id="answer5" class="startbutton">X</button>
+                <button id="answer6" class="startbutton">X</button>
+                <button id="answer7" class="startbutton">X</button>
+                <button id="answer8" class="startbutton">X</button> 
+            </div>
+
+            <button id="endbutton" class="endbutton-off">Play Again!</button>
+
+        </div>
+
+        <div class="results">
+            <div id="arearesult" class="arearesult"></div>
+            <div id="round" class="round">0/10</div>
+        </div>
+
+
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+
+
+
+
+
+</html>

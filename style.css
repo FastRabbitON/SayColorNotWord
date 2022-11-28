@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 10px;
+    /* background-color: black; */
+    scroll-behavior: smooth;
+    overflow: hidden;  
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: aquamarine; */
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.startscreen-on{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.startscreen-off{
+    display: none;
+}
+
+#startscreen .background{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 100, 100, 0.7);
+}
+
+#startscreen .content{
+    position: absolute;
+    width: 70%;
+    height: 90%;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 0.3rem solid black;
+    background-color: white;
+}
+
+#startscreen .content h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#startscreen .content div{
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+#startscreen .content .giph{
+    display: flex;
+    margin-top: 3rem;
+    width: 600px;
+    height: 300px;
+    background-color: aqua;
+    background-image: url("GameRule.gif");
+    border: 0.3rem solid black;
+    border-radius: 10px;
+    padding: 0.2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#startscreen .content button{
+    margin-top: 3rem;
+    font-size: 3rem;
+    padding: .5rem;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.answerborder{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: rgb(221, 190, 153); */
+
+    width: 82%;
+    height: 100%;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(235, 141, 104); */
+    width: 100%;
+    height: 10%; 
+
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.counter-off{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(233, 128, 87); */
+    width: 100%;
+    height: 15%; 
+    font-size: 5rem;
+    transition: all 0.1s ease-in-out;
+}
+
+.counter-on{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(233, 128, 87); */
+    width: 100%;
+    height: 15%; 
+    font-size: 5.5rem;
+    /* font-weight: 600; */
+    color: red;
+    transition: all 0.1s ease-in-out;
+}
+
+.counter-on::after{
+    content: "+2";
+    position: absolute;
+    font-size: 3rem;
+    font-weight: 600;
+    top: 8.5rem;
+    left: 38%;
+    animation: addsecondanimation .40s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes addsecondanimation{
+    from{
+        top: 8.5rem;
+        opacity: 1;
+    }
+
+    to{
+        top: 5.5rem;
+        opacity: 0;
+    }
+}
+
+
+.question{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(236, 113, 65); */
+
+    width: 100%;
+    height: 20%;   
+}
+
+.question div{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 8rem;
+}
+
+.answer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(242, 98, 41); */
+    width: 75%;
+    height: 40%;  
+}
+
+.answer button{
+    margin: 3rem;
+    font-size: 3rem;
+    height: 7rem;
+    width: 16rem;
+    padding: .5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.results{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: rgb(203, 61, 83); */
+    border-left: .2rem solid black;
+    width: 18%;
+    height: 100%;
+}
+
+.arearesult{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+    border-bottom: .2rem solid black;
+
+    font-size: 3rem;
+    /* background-color: aqua; */
+}
+
+.arearesult::before{
+    content: "ROUND TIME [s]";
+    font-weight: 600;
+
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.round{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 35%;
+    font-size: 3rem;
+}
+
+.round::before{
+    content: "ROUND";
+    font-weight: 600;
+
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.endbutton-off{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    font-size: 2rem;
+    height: 5rem;
+    width: 16rem;
+    padding: .5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;  
+}
+
+.endbutton-on{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    font-size: 2rem;
+    height: 5rem;
+    width: 16rem;
+    padding: .5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer; 
+}
+
+
+/* .summaryresult{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    background-color: rgb(156, 91, 10);
+
+    font-size: 3rem;
+}
+
+.summaryresult::before{
+    content: "Total Time [s]";
+    margin-bottom: 3rem;
+} */
