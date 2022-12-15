@@ -1,4 +1,4 @@
-# Say Color Not Word Game
+# Say Color Not Word Game 🎮
 Project available under link: \
 **https://srv49151.seohost.com.pl/Projects/SayColor/index.html**
 
