@@ -16,7 +16,7 @@ Simple online game that tests your reflexes and perceptivity.
 
 ## How to run
 Online [here](https://srv49151.seohost.com.pl/Projects/SayColor/index.html) or :
- 1. Download all repositorie
+ 1. Download the entire repository
  2. Unzip in a folder
  3. Run by open **index.html** file
 
