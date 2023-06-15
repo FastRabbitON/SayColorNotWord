@@ -1,5 +1,4 @@
 # Say Color Not Word Game 🎮
-Project available under link: \
 
 ## Table of Contents
 
